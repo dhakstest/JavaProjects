@@ -22,9 +22,21 @@ public class Main {
 		cusReq.setT(cus);										// set the created customer object in the request
 		cusReq.setType("Customer");								// set the type of request 
 		
-		myRequestHandler.handleRequest(cusReq);					// calling the request handler to assign the request to appropriate handlers
+		myRequestHandler.handleRequest(cusReq);	
 		
+		// calling the request handler to assign the request to appropriate handlers
+		Product prod = new Product(1101,"M5P3",5000);
+		Request<Product> prodreq = new Request<Product>();
+		prodreq.setT(prod);
+		prodreq.setType("Product");
 		
+		myRequestHandler.handleRequest(prodreq);
+		
+		Employee emp = new Employee(543994,"AAXXYY","OBC",60000);
+		Request<Employee> empreq = new Request<Employee>();
+		empreq.setT(emp);
+		empreq.setType("Employee");
+		myRequestHandler.handleRequest(empreq);
 		Logger.println(Main.class, "Exiting main method");
 	}
 }
@@ -56,6 +68,8 @@ class MyRequestHandler 	{
 		
 		try {
 			this.myHandlers.add(new CustomerHandler());
+			this.myHandlers.add(new ProductHandler());
+			this.myHandlers.add(new EmployeeHandler());
 			//add as mush as request handlers as required
 			
 		} catch (Exception e) {

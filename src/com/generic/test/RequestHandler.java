@@ -1,7 +1,7 @@
 package com.generic.test;
 
 public interface RequestHandler {
-
+	
 	public boolean isHandler(String type);
 	
 	/**

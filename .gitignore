@@ -1,1 +1,9 @@
 /bin/
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/dictionaries/gpunyakoti.xml
+*.iml
+.idea/vcs.xml
